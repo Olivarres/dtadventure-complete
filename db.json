@@ -84,20 +84,20 @@
   "saves": [
     {
       "id": 1,
-      "life": 60,
-      "gold": 4000,
+      "life": 70,
+      "gold": 3200,
       "step": 4
     },
     {
       "id": 2,
       "life": 100,
-      "or": 0,
+      "gold": 0,
       "step": 1
     },
     {
       "id": 3,
       "life": 100,
-      "or": 0,
+      "gold": 0,
       "step": 1
     }
   ]

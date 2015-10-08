@@ -1,4 +1,4 @@
-export default function HomeController (StepService) {
+export default function HomeController ($location, StepService, UserService) {
     var homeCtrl = this;
 	
     StepService.getSteps()
@@ -12,11 +12,15 @@ export default function HomeController (StepService) {
 	
 	homeCtrl.sortBy = function(attrib){
 		this.predicate = attrib;
-		this.reverse = !this.reverse
+		this.reverse = !this.reverse;
 	}
 	
-	homeCtrl.load = function(id){
-		this.load = StepService.loadGame(id)
+	homeCtrl.loadGame = function(id){
+		StepService.loadGame(id).then(
+			function(game){
+				$location.path('/play/'+game.step)
+			}
+		)
 	}
 
 }

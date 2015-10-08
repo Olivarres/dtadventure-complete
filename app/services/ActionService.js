@@ -2,9 +2,8 @@ export default function ActionService ($location) {
 
     return {
         go: function(user, params) {
+            user.step = params.step;
             $location.path('/play/' + params.step)
-            user.step = params.step
-            console.log(user.step)
             return true
         },
 

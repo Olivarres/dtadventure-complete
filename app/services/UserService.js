@@ -1,4 +1,4 @@
-export default function StepService ($http, ActionService) {
+export default function UserService ($http, ActionService) { 
     return {
         id: 1,
         life: 100,
