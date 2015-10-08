@@ -1,0 +1,21 @@
+<h2>Edit step</h2>
+  <form name="ctrl.editStepForm" novalidate>
+
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input name="name" required ng-model="ctrl.editStep.name">
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea name="description" ng-model="ctrl.editStep.description">
+    </div>
+
+    <div class="form-group">
+      <label for="name">start</label>
+      <input type="checkbox" name="name" required ng-model="ctrl.editStep.start">
+    </div>
+
+    <button type="submit" ng-click="ctrl.saveEditForm()">Save</button>
+    <pre>{{ ctrl.editStep | json }}</pre>
+  </form>

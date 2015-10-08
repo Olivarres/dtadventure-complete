@@ -1,4 +1,4 @@
-export default function StepController ($routeParams, StepService, UserService) {
+export default function PlayStepController ($routeParams, StepService, UserService) {
 
     StepService.getStep($routeParams.id)
     .then(function (step) {

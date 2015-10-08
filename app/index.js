@@ -8,6 +8,7 @@ import PlayStepController from './controllers/PlayStepController'
 import StepService from './services/StepService'
 import ActionService from './services/ActionService'
 import UserService from './services/UserService'
+import EditStepController from './controllers/EditStepController'
 
 angular.module('DTAdventure', [ngRoute])
 
