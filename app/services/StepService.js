@@ -15,7 +15,7 @@ export default function StepService ($http, ActionService) {
         //     .then(handleResponse)
         // },
         saveStep: function(step) {
-          return $http.put('http://localhost:3000/steps/' + step.id)
+          return $http.put('http://localhost:3000/steps/' + step.id, step)
           .then(handleResponse);
         },
 

@@ -18,22 +18,21 @@
 
     <div class="form-group">
       <label for="description">actions</label><br>
-      <select name="" ng-model="ctrl.currentAction" ng-options="action.type for action in ctrl.editStep.actions"></select>
-      <div ng-show="ctrl.currentAction">
+      <select name="" ng-model="ctrl.editStep.actions[action]" ng-options="action.type for action in ctrl.editStep.actions"></select>
+      <div ng-show="ctrl.editStep.actions[action]">
         <label for="type">Type</label>
-        <input name="type" ng-model="ctrl.currentAction.type"><br>
+        <input name="type" ng-model="ctrl.editStep.actions[action].type"><br>
 
         <label for="name">Name</label>
-        <input name="name" ng-model="ctrl.currentAction.name"><br>
+        <input name="name" ng-model="ctrl.editStep.actions[action].name"><br>
 
         <label for="params">type</label>
-        <select name="" ng-model="ctrl.currentAction.params" ng-options="data as name for (name, data) in ctrl.currentAction.params"></select>
-        <div ng-show="ctrl.currentAction">
-          {{ name}} : {{data}}
+        <!-- Modifier la valeur d'un paramètre -->
+        <select name="" ng-model="ctrl.editStep.actions[action].params[data]" ng-options="data as name for (name, data) in ctrl.editStep.actions[action].params"></select>
+        <input ng-show="ctrl.editStep.actions[action].params[data]" name="type" ng-model="ctrl.editStep.actions[action].params[name]">
       </div>
-      <!-- <pre>{{ ctrl.currentAction | json }}</pre> -->
     </div>
 
-    <button type="submit" ng-click="ctrl.saveEditForm()">Save</button>
+    <button type="submit" ng-click="ctrl.saveEditForm(ctrl.editStep)">Save</button>
     <pre>{{ ctrl.editStep | json }}</pre>
   </form>
