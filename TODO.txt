@@ -1,0 +1,16 @@
+Trier le tableau sur le nom
+Mettre un moteur de recherche
+Afficher le bouton play uniquement pour les étapes de démarrage
+
+Ajouter controller edition EditStepController
+Ajouter vue edition edit.html
+Ajouter la route correspondante
+Modifier home.html avec le lien vers la nouvelle route
+Formulaire édition
+	name:input type text
+	description textarea
+	start : checkbox
+	actions :???? (sous formulaire ?, ajout / suppression d'une action
+action de sauvegarde
+	nouvelle méthode dans StepService
+
