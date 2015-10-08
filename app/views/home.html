@@ -1,8 +1,7 @@
 <table class="table">
     <thead>
         <tr>
-            <th>Nom</th>
-            <th></th>
+            <th colspan="3">Nom</th>
         </tr>
     </thead>
     <tbody>
@@ -10,6 +9,8 @@
             <td>{{ step.name }}</td>
             <td>
                 <a ng-href="">Edit</a>
+            </td>
+            <td>
                 <a ng-href="#/play/{{ step.id }}">Start !</a>
             </td>
         </tr>
