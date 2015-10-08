@@ -18,7 +18,7 @@ angular.module('DTAdventure', [ngRoute])
 // controllers
 .controller('HomeController', HomeController)
 .controller('PlayStepController', PlayStepController)
-//.controller('EditStepController', EditStepController)
+.controller('EditStepController', EditStepController)
 
 
 // filters
@@ -26,4 +26,4 @@ angular.module('DTAdventure', [ngRoute])
 // services
 .factory('StepService', StepService)
 .factory('ActionService', ActionService)
-.factory('UserService', UserService)
+.factory('UserService', UserService);

@@ -8,14 +8,14 @@ export default function configuration ($routeProvider) {
         controllerAs: 'ctrl'
     })
 
-    .when('/play/   :id', {
+    .when('/play/:id', {
         templateUrl : 'views/play.html',
         controller  : 'PlayStepController',
         controllerAs: 'ctrl'
     })
 
-    .when('/edit/   :id', {
-      templateUrl   : 'views/play.html',
+    .when('/edit/:id', {
+      templateUrl   : 'views/editStepForm.html',
       controller    : 'EditStepController',
       controllerAs  : 'ctrl'
     })
