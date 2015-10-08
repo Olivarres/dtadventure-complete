@@ -20,6 +20,10 @@ export default function configuration ($routeProvider) {
       controllerAs  : 'ctrl'
     })
 
+    .when('/death', {
+      templateUrl   : 'views/death.html',
+    })
+
     .otherwise({
         redirectTo: '/'
     })
