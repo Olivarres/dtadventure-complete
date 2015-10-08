@@ -1,4 +1,4 @@
-export default function EditStepController ($routeParams, StepService, UserService) {
+export default function EditStepController ($routeParams, StepService, UserService, $location) {
 
   var ctrl = this;
 
