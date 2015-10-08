@@ -27,7 +27,7 @@
         <input name="name" ng-model="ctrl.currentAction.name"><br>
 
         <label for="params">type</label>
-        <select name="" ng-model="ctrl.currentAction.params" ng-options="name as data for (name, data) in ctrl.currentAction.params"></select>
+        <select name="" ng-model="ctrl.currentAction.params" ng-options="data as name for (name, data) in ctrl.currentAction.params"></select>
         <div ng-show="ctrl.currentAction">
           {{ name}} : {{data}}
       </div>
