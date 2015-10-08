@@ -18,7 +18,10 @@ export default function HomeController ($location, StepService, UserService) {
 	homeCtrl.loadGame = function(id){
 		StepService.loadGame(id).then(
 			function(game){
-				$location.path('/play/'+game.step)
+				$location.path('/play/'+game.step);
+				UserService.id = id;
+				UserService.gold = game.gold;
+				UserService.life = game.life;
 			}
 		)
 	}
