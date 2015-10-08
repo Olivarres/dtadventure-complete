@@ -1,6 +1,9 @@
 <div>
-    <strong>OR</strong> {{ ctrl.user.gold }}
+    <strong>Status:</strong>
+    <br>
     <strong>LIFE</strong> {{ ctrl.user.life }}
+    <br>
+    <strong>OR</strong> {{ ctrl.user.gold }}
 </div>
 
 <h4>{{ ctrl.step.name }}</h4>
@@ -10,3 +13,4 @@
         <a href="" ng-click="ctrl.selectAction(action)">{{ action.name }}</a>
     </li>
 </ul>
+<button type="button" class="btn btn-success" ng-click="ctrl.save(ctrl.user)">Sauvegardez</button>

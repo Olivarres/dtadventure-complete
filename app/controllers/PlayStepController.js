@@ -1,4 +1,4 @@
-export default function PlayStepController ($routeParams, StepService, UserService) {
+export default function PlayStepController ($routeParams, StepService, UserService, SaveService) {
 
     StepService.getStep($routeParams.id)
     .then(function (step) {
@@ -9,6 +9,10 @@ export default function PlayStepController ($routeParams, StepService, UserServi
 
     this.selectAction = function (action) {
         StepService.action(action, this.user)
+    }
+    
+    this.save = function () {
+        SaveService.save(this.user)
     }
 
 }

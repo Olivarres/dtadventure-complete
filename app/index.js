@@ -8,6 +8,7 @@ import PlayStepController from './controllers/PlayStepController'
 import StepService from './services/StepService'
 import ActionService from './services/ActionService'
 import UserService from './services/UserService'
+import SaveService from './services/SaveService'
 import EditStepController from './controllers/EditStepController'
 
 angular.module('DTAdventure', [ngRoute])
@@ -26,4 +27,5 @@ angular.module('DTAdventure', [ngRoute])
 // services
 .factory('StepService', StepService)
 .factory('ActionService', ActionService)
-.factory('UserService', UserService);
+.factory('UserService', UserService)
+.factory('SaveService', SaveService);
