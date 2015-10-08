@@ -1,0 +1,12 @@
+<div>
+    <strong>OR</strong> {{ ctrl.user.gold }}
+    <strong>LIFE</strong> {{ ctrl.user.life }}
+</div>
+
+<h4>{{ ctrl.step.name }}</h4>
+<p>{{ ctrl.step.description }}</p>
+<ul>
+    <li ng-repeat="action in ctrl.step.actions track by $index">
+        <a href="" ng-click="ctrl.selectAction(action)">{{ action.name }}</a>
+    </li>
+</ul>

@@ -1,0 +1,17 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="step in ctrl.steps track by $index">
+            <td>{{ step.name }}</td>
+            <td>
+                <a ng-href="">Edit</a>
+                <a ng-href="#/play/{{ step.id }}">Start !</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
