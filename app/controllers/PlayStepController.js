@@ -1,4 +1,4 @@
-export default function PlayStepController ($routeParams, $location, StepService, UserService, SaveService) {
+export default function PlayStepController ($routeParams, $location, StepService, UserService) {
 
     StepService.getStep($routeParams.id)
     .then(function (step) {
@@ -11,8 +11,8 @@ export default function PlayStepController ($routeParams, $location, StepService
         StepService.action(action, this.user)
     }
     
-    this.save = function () {
-        SaveService.save(this.user).then(
+    this.saveGame = function () {
+        StepService.saveGame(this.user).then(
             function(){
                 $location.path('/');   
             }

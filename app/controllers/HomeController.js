@@ -14,5 +14,9 @@ export default function HomeController (StepService) {
 		this.predicate = attrib;
 		this.reverse = !this.reverse
 	}
+	
+	homeCtrl.load = function(id){
+		this.load = StepService.loadGame(id)
+	}
 
 }
