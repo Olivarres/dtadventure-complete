@@ -4,11 +4,10 @@ import ngRoute from 'angular-route'
 import configuration from './configuration'
 import HomeController from './controllers/HomeController'
 import PlayStepController from './controllers/PlayStepController'
-//import EditStepController from './controllers/EditStepController'
+import EditStepController from './controllers/EditStepController'
 import StepService from './services/StepService'
 import ActionService from './services/ActionService'
 import UserService from './services/UserService'
-import EditStepController from './controllers/EditStepController'
 
 angular.module('DTAdventure', [ngRoute])
 

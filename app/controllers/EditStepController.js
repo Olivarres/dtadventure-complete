@@ -11,6 +11,9 @@ export default function EditStepController ($routeParams, StepService, UserServi
     if (ctrl.editStepForm.$invalid)
       alert("error");
 
-
+      StepService.saveStep(editStep)
+      .then(function() {
+        $location.path('/');
+      })
   };
 }

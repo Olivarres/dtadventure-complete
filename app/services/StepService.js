@@ -14,6 +14,10 @@ export default function StepService ($http, ActionService) {
         //     return $http.post('http://localhost:3000/steps', step)
         //     .then(handleResponse)
         // },
+        saveStep: function(step) {
+          return $http.get('http://localhost:3000/steps/' + step.id)
+          .then(handleResponse);
+        },
 
         getStep: function (id) {
             return $http.get('http://localhost:3000/steps/' + id)
