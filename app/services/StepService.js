@@ -15,7 +15,7 @@ export default function StepService ($http, ActionService) {
         //     .then(handleResponse)
         // },
         saveStep: function(step) {
-          return $http.get('http://localhost:3000/steps/' + step.id)
+          return $http.put('http://localhost:3000/steps/' + step.id)
           .then(handleResponse);
         },
 
@@ -23,6 +23,10 @@ export default function StepService ($http, ActionService) {
             return $http.get('http://localhost:3000/steps/' + id)
             .then(handleResponse)
         },
+
+        deleteStep: function (step) {
+            return $http.delete('http://localhost:3000/steps/' + step.id)
+            .then(handleResponse)
 
         action: function (action, user) {
             return ActionService[action.type](user, action.params)
