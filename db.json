@@ -67,15 +67,22 @@
           "type": "fight",
           "name": "Combattez le dragon",
           "params": {
-            "life": -10,
-            "gold": 1000
+            "life": "-10",
+            "gold": "1000"
           }
         },
         {
           "type": "go",
           "name": "Sortez",
           "params": {
-            "step": 2
+            "step": "2"
+          }
+        },
+        {
+          "type": "go",
+          "name": "Courir a l'autre porte",
+          "params": {
+            "step": "3"
           }
         }
       ]

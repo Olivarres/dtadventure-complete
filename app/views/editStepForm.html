@@ -1,38 +1,43 @@
 <h2>Edit step</h2>
-  <form name="ctrl.editStepForm" novalidate>
-    <div class="form-group">
-      <label for="name">Name</label><br>
-      <input name="name" required ng-model="ctrl.editStep.name">
-    </div>
+<form ng-submit="ctrl.save()" name="ctrl.stepForm" novalidate>
 
-    <div class="form-group">
-      <label for="description">Description</label><br>
-      <textarea name="description" ng-model="ctrl.editStep.description"></textarea>
-    </div>
+    <p>
+        <label for="name">Name *</label>
+        <input ng-model="ctrl.step.name" name="name" id="name" type="text" required>
+    </p>
 
-    <div class="form-group">
-      <label>
-          <input type="checkbox" id="start" name="start" ng-model="ctrl.editStep.start">start
-      </label>
-    </div>
+    <p>
+        <label for="start">Start</label>
+        <input ng-model="ctrl.step.start" name="start" id="start" type="checkbox">
+    </p>
 
-    <div class="form-group">
-      <label for="description">actions</label><br>
-      <select name="" ng-model="ctrl.editStep.actions[action]" ng-options="action.type for action in ctrl.editStep.actions"></select>
-      <div ng-show="ctrl.editStep.actions[action]">
-        <label for="type">Type</label>
-        <input name="type" ng-model="ctrl.editStep.actions[action].type"><br>
+    <p>
+        <label for="desc">Description</label>
+        <textarea ng-model="ctrl.step.description"
+            name="description"
+            id="desc"></textarea>
+    </p>
 
-        <label for="name">Name</label>
-        <input name="name" ng-model="ctrl.editStep.actions[action].name"><br>
 
-        <label for="params">type</label>
-        <!-- Modifier la valeur d'un paramètre -->
-        <select name="" ng-model="ctrl.editStep.actions[action].params[data]" ng-options="data as name for (name, data) in ctrl.editStep.actions[action].params"></select>
-        <input ng-show="ctrl.editStep.actions[action].params[data]" name="type" ng-model="ctrl.editStep.actions[action].params[name]">
-      </div>
-    </div>
+    <p ng-repeat="action in ctrl.step.actions track by $index">
 
-    <button type="submit" ng-click="ctrl.saveEditForm(ctrl.editStep)">Save</button>
-    <pre>{{ ctrl.editStep | json }}</pre>
-  </form>
+        <label for="">name</label>
+        <input type="text" ng-model="action.name">
+
+        <label for="">type</label>
+        <select ng-model="action.type"
+            ng-options="typeAction for typeAction in ctrl.typeActions"></select>
+
+        <label for="">parameters</label>
+        <textarea ng-model="action.params"></textarea>
+
+        <button type="button" ng-click="ctrl.removeAction($index)">Delete</button>
+    </p>
+    <button type="button" ng-click="ctrl.addAction()">Add action</button>
+
+    <p>
+        <button type="submit">Save</button>
+        <button type="button" ng-click="ctrl.delete()">Delete</button>
+    </p>
+
+</form>

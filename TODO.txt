@@ -3,16 +3,16 @@
 [x] Afficher le bouton play uniquement pour les étapes de démarrage
 
 [x] Ajouter controller edition EditStepController
-[ ] Ajouter vue edition edit.html
+[x] Ajouter vue edition edit.html
 [x] Ajouter la route correspondante
 [x] Modifier home.html avec le lien vers la nouvelle route
-[ ] Formulaire édition
+[x] Formulaire édition
 		name:input type text
 		description textarea
 		start : checkbox
 		actions :???? (sous formulaire ?, ajout / suppression d'une action
-[X] action de sauvegarde
+[x] action de sauvegarde
 		nouvelle méthode dans StepService
-[ ] action de chargement
+[x] action de chargement
 		nouvelle méthode dans StepService
 

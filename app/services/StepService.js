@@ -3,6 +3,8 @@ export default function StepService ($http, ActionService) {
     function handleResponse(response) {
         return response.data
     }
+        
+    var url = "http://localhost:3000/steps";
 
     return {
         getSteps: function () {
@@ -14,9 +16,15 @@ export default function StepService ($http, ActionService) {
         //     return $http.post('http://localhost:3000/steps', step)
         //     .then(handleResponse)
         // },
-        saveStep: function(step) {
-          return $http.put('http://localhost:3000/steps/' + step.id, step)
-          .then(handleResponse);
+        
+        saveStep: function (step) {
+            if (step.id) {
+                return $http.put(url + '/' + step.id, step)
+                .then(handleResponse)
+            } else {
+                return $http.post(url + '/', step)
+                .then(handleResponse)
+            }
         },
 
         getStep: function (id) {
