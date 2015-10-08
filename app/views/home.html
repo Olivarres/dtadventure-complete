@@ -1,8 +1,8 @@
 <div class="chargement">
     <p>Charger une partie:</p>
-    <button type="button" class="btn btn-success" ng-click="ctrl.loadGame(1)">Partie 1</button>
-    <button type="button" class="btn btn-success" ng-click="ctrl.loadGame(2)">Partie 2</button>
-    <button type="button" class="btn btn-success" ng-click="ctrl.loadGame(3)">Partie 3</button>
+    <button type="button" class="btn btn-sm btn-success" ng-click="ctrl.loadGame(1)">Partie 1</button>
+    <button type="button" class="btn btn-sm btn-success" ng-click="ctrl.loadGame(2)">Partie 2</button>
+    <button type="button" class="btn btn-sm btn-success" ng-click="ctrl.loadGame(3)">Partie 3</button>
 </div>
 
 <input type="text" ng-model="query">
@@ -19,7 +19,10 @@
                 <a ng-href="#/edit/{{ step.id }}">Edit</a>
             </td>
             <td>
-                <a ng-href="#/play/{{ step.id }}" ng-show="step.start === true">Start !</a>
+                <button type="button" class="btn btn-xs btn-primary" ng-click="ctrl.startGame(1)" ng-show="step.start === true">Démarrer partie 1</button>
+                <button type="button" class="btn btn-xs btn-primary" ng-click="ctrl.startGame(2)" ng-show="step.start === true">Démarrer partie 2</button>
+                <button type="button" class="btn btn-xs btn-primary" ng-click="ctrl.startGame(3)" ng-show="step.start === true">Démarrer partie 3</button>
+                <!--<a ng-href="#/play/{{ step.id }}" ng-show="step.start === true">Start !</a>-->
             </td>
         </tr>
     </tbody>

@@ -25,5 +25,13 @@ export default function HomeController ($location, StepService, UserService) {
 			}
 		)
 	}
+	
+	homeCtrl.startGame = function(id){
+		$location.path('/play/1');
+		UserService.id = id;
+		UserService.gold = 0;
+		UserService.life = 100;
+		UserService.step = 1;
+	}
 
 }
