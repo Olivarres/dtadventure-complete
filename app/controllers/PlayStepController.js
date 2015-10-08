@@ -12,7 +12,11 @@ export default function PlayStepController ($routeParams, StepService, UserServi
     }
     
     this.save = function () {
-        SaveService.save(this.user)
+        SaveService.save(this.user).then(
+            function(){
+                $location.path('/');   
+            }
+        )
     }
 
 }
